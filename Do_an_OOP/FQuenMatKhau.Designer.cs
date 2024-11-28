@@ -1,6 +1,6 @@
 ﻿namespace Do_an_OOP
 {
-    partial class Login
+    partial class FQuenMatKhau
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Login
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Login";
-            this.Text = "Login";
-            this.ResumeLayout(false);
-
+            this.Text = "FQuenMatKhau";
         }
 
         #endregion
     }
 }
-
