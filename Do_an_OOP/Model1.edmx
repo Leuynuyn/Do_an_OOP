@@ -202,7 +202,7 @@
           <Property Name="LuongTrenGio" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="TongLuong" Type="decimal" Precision="10" Scale="2" />
         </EntityType>
-        <Association Name="FK__CALAMVIEC__IDNha__49C3F6B7">
+        <Association Name="FK__CALAMVIEC__IDNha__5AEE82B9">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="CALAMVIEC" Type="Self.CALAMVIEC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -214,7 +214,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CTHDDATSA__IDHDD__45F365D3">
+        <Association Name="FK__CTHDDATSA__IDHDD__571DF1D5">
           <End Role="HDDATSAN" Type="Self.HDDATSAN" Multiplicity="1" />
           <End Role="CTHDDATSAN" Type="Self.CTHDDATSAN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -226,7 +226,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CTHDDATSA__IDSan__46E78A0C">
+        <Association Name="FK__CTHDDATSA__IDSan__5812160E">
           <End Role="SAN" Type="Self.SAN" Multiplicity="1" />
           <End Role="CTHDDATSAN" Type="Self.CTHDDATSAN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -238,7 +238,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CTHDSP__IDHDSP__6EF57B66">
+        <Association Name="FK__CTHDSP__IDHDSP__6E01572D">
           <End Role="HDSP" Type="Self.HDSP" Multiplicity="1" />
           <End Role="CTHDSP" Type="Self.CTHDSP" Multiplicity="*" />
           <ReferentialConstraint>
@@ -250,7 +250,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CTHDSP__IDSP__6FE99F9F">
+        <Association Name="FK__CTHDSP__IDSP__6EF57B66">
           <End Role="SPFOOD" Type="Self.SPFOOD" Multiplicity="1" />
           <End Role="CTHDSP" Type="Self.CTHDSP" Multiplicity="*" />
           <ReferentialConstraint>
@@ -262,7 +262,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CTHDTONG__IDHDTo__6383C8BA">
+        <Association Name="FK__CTHDTONG__IDHDTo__74AE54BC">
           <End Role="HDTONG" Type="Self.HDTONG" Multiplicity="1" />
           <End Role="CTHDTONG" Type="Self.CTHDTONG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -274,7 +274,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__HDDATSAN__IDKhac__4316F928">
+        <Association Name="FK__HDDATSAN__IDKhac__5441852A">
           <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
           <End Role="HDDATSAN" Type="Self.HDDATSAN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -286,7 +286,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__HDSP__IDKhachHan__59FA5E80">
+        <Association Name="FK__HDSP__IDKhachHan__6B24EA82">
           <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
           <End Role="HDSP" Type="Self.HDSP" Multiplicity="*" />
           <ReferentialConstraint>
@@ -298,7 +298,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__HDTONG__IDKH__60A75C0F">
+        <Association Name="FK__HDTONG__IDKH__71D1E811">
           <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
           <End Role="HDTONG" Type="Self.HDTONG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -310,7 +310,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__KHUYENMAI__IDSan__66603565">
+        <Association Name="FK__KHUYENMAI__IDSan__628FA481">
           <End Role="SAN" Type="Self.SAN" Multiplicity="1" />
           <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -322,7 +322,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__KHUYENMAI__IDSuK__6754599E">
+        <Association Name="FK__KHUYENMAI__IDSuK__6383C8BA">
           <End Role="SUKIEN" Type="Self.SUKIEN" Multiplicity="1" />
           <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -334,7 +334,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SAN__IDLoaiSan__3F466844">
+        <Association Name="FK__SAN__IDLoaiSan__5165187F">
           <End Role="LOAISAN" Type="Self.LOAISAN" Multiplicity="1" />
           <End Role="SAN" Type="Self.SAN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -346,7 +346,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SPFOOD__IDLoaiSP__6C190EBB">
+        <Association Name="FK__SPFOOD__IDLoaiSP__68487DD7">
           <End Role="LSPFOOD" Type="Self.LSPFOOD" Multiplicity="1" />
           <End Role="SPFOOD" Type="Self.SPFOOD" Multiplicity="*" />
           <ReferentialConstraint>
@@ -358,7 +358,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TINHLUONG__IDNha__4CA06362">
+        <Association Name="FK__TINHLUONG__IDNha__5DCAEF64">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="TINHLUONG" Type="Self.TINHLUONG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -388,59 +388,59 @@
           <EntitySet Name="SPFOOD" EntityType="Self.SPFOOD" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SUKIEN" EntityType="Self.SUKIEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TINHLUONG" EntityType="Self.TINHLUONG" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__CALAMVIEC__IDNha__49C3F6B7" Association="Self.FK__CALAMVIEC__IDNha__49C3F6B7">
+          <AssociationSet Name="FK__CALAMVIEC__IDNha__5AEE82B9" Association="Self.FK__CALAMVIEC__IDNha__5AEE82B9">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="CALAMVIEC" EntitySet="CALAMVIEC" />
           </AssociationSet>
-          <AssociationSet Name="FK__CTHDDATSA__IDHDD__45F365D3" Association="Self.FK__CTHDDATSA__IDHDD__45F365D3">
+          <AssociationSet Name="FK__CTHDDATSA__IDHDD__571DF1D5" Association="Self.FK__CTHDDATSA__IDHDD__571DF1D5">
             <End Role="HDDATSAN" EntitySet="HDDATSAN" />
             <End Role="CTHDDATSAN" EntitySet="CTHDDATSAN" />
           </AssociationSet>
-          <AssociationSet Name="FK__CTHDDATSA__IDSan__46E78A0C" Association="Self.FK__CTHDDATSA__IDSan__46E78A0C">
+          <AssociationSet Name="FK__CTHDDATSA__IDSan__5812160E" Association="Self.FK__CTHDDATSA__IDSan__5812160E">
             <End Role="SAN" EntitySet="SAN" />
             <End Role="CTHDDATSAN" EntitySet="CTHDDATSAN" />
           </AssociationSet>
-          <AssociationSet Name="FK__CTHDSP__IDHDSP__6EF57B66" Association="Self.FK__CTHDSP__IDHDSP__6EF57B66">
+          <AssociationSet Name="FK__CTHDSP__IDHDSP__6E01572D" Association="Self.FK__CTHDSP__IDHDSP__6E01572D">
             <End Role="HDSP" EntitySet="HDSP" />
             <End Role="CTHDSP" EntitySet="CTHDSP" />
           </AssociationSet>
-          <AssociationSet Name="FK__CTHDSP__IDSP__6FE99F9F" Association="Self.FK__CTHDSP__IDSP__6FE99F9F">
+          <AssociationSet Name="FK__CTHDSP__IDSP__6EF57B66" Association="Self.FK__CTHDSP__IDSP__6EF57B66">
             <End Role="SPFOOD" EntitySet="SPFOOD" />
             <End Role="CTHDSP" EntitySet="CTHDSP" />
           </AssociationSet>
-          <AssociationSet Name="FK__CTHDTONG__IDHDTo__6383C8BA" Association="Self.FK__CTHDTONG__IDHDTo__6383C8BA">
+          <AssociationSet Name="FK__CTHDTONG__IDHDTo__74AE54BC" Association="Self.FK__CTHDTONG__IDHDTo__74AE54BC">
             <End Role="HDTONG" EntitySet="HDTONG" />
             <End Role="CTHDTONG" EntitySet="CTHDTONG" />
           </AssociationSet>
-          <AssociationSet Name="FK__HDDATSAN__IDKhac__4316F928" Association="Self.FK__HDDATSAN__IDKhac__4316F928">
+          <AssociationSet Name="FK__HDDATSAN__IDKhac__5441852A" Association="Self.FK__HDDATSAN__IDKhac__5441852A">
             <End Role="KHACHHANG" EntitySet="KHACHHANG" />
             <End Role="HDDATSAN" EntitySet="HDDATSAN" />
           </AssociationSet>
-          <AssociationSet Name="FK__HDSP__IDKhachHan__59FA5E80" Association="Self.FK__HDSP__IDKhachHan__59FA5E80">
+          <AssociationSet Name="FK__HDSP__IDKhachHan__6B24EA82" Association="Self.FK__HDSP__IDKhachHan__6B24EA82">
             <End Role="KHACHHANG" EntitySet="KHACHHANG" />
             <End Role="HDSP" EntitySet="HDSP" />
           </AssociationSet>
-          <AssociationSet Name="FK__HDTONG__IDKH__60A75C0F" Association="Self.FK__HDTONG__IDKH__60A75C0F">
+          <AssociationSet Name="FK__HDTONG__IDKH__71D1E811" Association="Self.FK__HDTONG__IDKH__71D1E811">
             <End Role="KHACHHANG" EntitySet="KHACHHANG" />
             <End Role="HDTONG" EntitySet="HDTONG" />
           </AssociationSet>
-          <AssociationSet Name="FK__KHUYENMAI__IDSan__66603565" Association="Self.FK__KHUYENMAI__IDSan__66603565">
+          <AssociationSet Name="FK__KHUYENMAI__IDSan__628FA481" Association="Self.FK__KHUYENMAI__IDSan__628FA481">
             <End Role="SAN" EntitySet="SAN" />
             <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
           </AssociationSet>
-          <AssociationSet Name="FK__KHUYENMAI__IDSuK__6754599E" Association="Self.FK__KHUYENMAI__IDSuK__6754599E">
+          <AssociationSet Name="FK__KHUYENMAI__IDSuK__6383C8BA" Association="Self.FK__KHUYENMAI__IDSuK__6383C8BA">
             <End Role="SUKIEN" EntitySet="SUKIEN" />
             <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
           </AssociationSet>
-          <AssociationSet Name="FK__SAN__IDLoaiSan__3F466844" Association="Self.FK__SAN__IDLoaiSan__3F466844">
+          <AssociationSet Name="FK__SAN__IDLoaiSan__5165187F" Association="Self.FK__SAN__IDLoaiSan__5165187F">
             <End Role="LOAISAN" EntitySet="LOAISAN" />
             <End Role="SAN" EntitySet="SAN" />
           </AssociationSet>
-          <AssociationSet Name="FK__SPFOOD__IDLoaiSP__6C190EBB" Association="Self.FK__SPFOOD__IDLoaiSP__6C190EBB">
+          <AssociationSet Name="FK__SPFOOD__IDLoaiSP__68487DD7" Association="Self.FK__SPFOOD__IDLoaiSP__68487DD7">
             <End Role="LSPFOOD" EntitySet="LSPFOOD" />
             <End Role="SPFOOD" EntitySet="SPFOOD" />
           </AssociationSet>
-          <AssociationSet Name="FK__TINHLUONG__IDNha__4CA06362" Association="Self.FK__TINHLUONG__IDNha__4CA06362">
+          <AssociationSet Name="FK__TINHLUONG__IDNha__5DCAEF64" Association="Self.FK__TINHLUONG__IDNha__5DCAEF64">
             <End Role="NHANVIEN" EntitySet="NHANVIEN" />
             <End Role="TINHLUONG" EntitySet="TINHLUONG" />
           </AssociationSet>
@@ -460,7 +460,7 @@
           <Property Name="GioLam" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="GioKetThuc" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="TongGio" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
-          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__CALAMVIEC__IDNha__49C3F6B7" FromRole="CALAMVIEC" ToRole="NHANVIEN" />
+          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__CALAMVIEC__IDNha__5AEE82B9" FromRole="CALAMVIEC" ToRole="NHANVIEN" />
         </EntityType>
         <EntityType Name="CTHDDATSAN">
           <Key>
@@ -474,8 +474,8 @@
           <Property Name="GioKetThuc" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="DonGia" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="ThanhTien" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
-          <NavigationProperty Name="HDDATSAN" Relationship="Self.FK__CTHDDATSA__IDHDD__45F365D3" FromRole="CTHDDATSAN" ToRole="HDDATSAN" />
-          <NavigationProperty Name="SAN" Relationship="Self.FK__CTHDDATSA__IDSan__46E78A0C" FromRole="CTHDDATSAN" ToRole="SAN" />
+          <NavigationProperty Name="HDDATSAN" Relationship="Self.FK__CTHDDATSA__IDHDD__571DF1D5" FromRole="CTHDDATSAN" ToRole="HDDATSAN" />
+          <NavigationProperty Name="SAN" Relationship="Self.FK__CTHDDATSA__IDSan__5812160E" FromRole="CTHDDATSAN" ToRole="SAN" />
         </EntityType>
         <EntityType Name="CTHDSP">
           <Key>
@@ -487,8 +487,8 @@
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="DonGia" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="ThanhTien" Type="Decimal" Precision="10" Scale="2" />
-          <NavigationProperty Name="HDSP" Relationship="Self.FK__CTHDSP__IDHDSP__6EF57B66" FromRole="CTHDSP" ToRole="HDSP" />
-          <NavigationProperty Name="SPFOOD" Relationship="Self.FK__CTHDSP__IDSP__6FE99F9F" FromRole="CTHDSP" ToRole="SPFOOD" />
+          <NavigationProperty Name="HDSP" Relationship="Self.FK__CTHDSP__IDHDSP__6E01572D" FromRole="CTHDSP" ToRole="HDSP" />
+          <NavigationProperty Name="SPFOOD" Relationship="Self.FK__CTHDSP__IDSP__6EF57B66" FromRole="CTHDSP" ToRole="SPFOOD" />
         </EntityType>
         <EntityType Name="CTHDTONG">
           <Key>
@@ -500,7 +500,7 @@
           <Property Name="IDHoaDonCon" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
           <Property Name="TongHoaDonCon" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="TongTienHDCon" Type="Decimal" Precision="10" Scale="2" />
-          <NavigationProperty Name="HDTONG" Relationship="Self.FK__CTHDTONG__IDHDTo__6383C8BA" FromRole="CTHDTONG" ToRole="HDTONG" />
+          <NavigationProperty Name="HDTONG" Relationship="Self.FK__CTHDTONG__IDHDTo__74AE54BC" FromRole="CTHDTONG" ToRole="HDTONG" />
         </EntityType>
         <EntityType Name="HDDATSAN">
           <Key>
@@ -512,8 +512,8 @@
           <Property Name="TienCoc" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="TongTien" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="TrangThai" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="CTHDDATSANs" Relationship="Self.FK__CTHDDATSA__IDHDD__45F365D3" FromRole="HDDATSAN" ToRole="CTHDDATSAN" />
-          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK__HDDATSAN__IDKhac__4316F928" FromRole="HDDATSAN" ToRole="KHACHHANG" />
+          <NavigationProperty Name="CTHDDATSANs" Relationship="Self.FK__CTHDDATSA__IDHDD__571DF1D5" FromRole="HDDATSAN" ToRole="CTHDDATSAN" />
+          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK__HDDATSAN__IDKhac__5441852A" FromRole="HDDATSAN" ToRole="KHACHHANG" />
         </EntityType>
         <EntityType Name="HDSP">
           <Key>
@@ -523,8 +523,8 @@
           <Property Name="IDKhachHang" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NgayLap" Type="DateTime" Precision="0" />
           <Property Name="TongTien" Type="Decimal" Precision="10" Scale="2" />
-          <NavigationProperty Name="CTHDSPs" Relationship="Self.FK__CTHDSP__IDHDSP__6EF57B66" FromRole="HDSP" ToRole="CTHDSP" />
-          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK__HDSP__IDKhachHan__59FA5E80" FromRole="HDSP" ToRole="KHACHHANG" />
+          <NavigationProperty Name="CTHDSPs" Relationship="Self.FK__CTHDSP__IDHDSP__6E01572D" FromRole="HDSP" ToRole="CTHDSP" />
+          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK__HDSP__IDKhachHan__6B24EA82" FromRole="HDSP" ToRole="KHACHHANG" />
         </EntityType>
         <EntityType Name="HDTONG">
           <Key>
@@ -534,8 +534,8 @@
           <Property Name="IDKH" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NgayLap" Type="DateTime" Precision="0" />
           <Property Name="TongTienTra" Type="Decimal" Precision="10" Scale="2" />
-          <NavigationProperty Name="CTHDTONGs" Relationship="Self.FK__CTHDTONG__IDHDTo__6383C8BA" FromRole="HDTONG" ToRole="CTHDTONG" />
-          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK__HDTONG__IDKH__60A75C0F" FromRole="HDTONG" ToRole="KHACHHANG" />
+          <NavigationProperty Name="CTHDTONGs" Relationship="Self.FK__CTHDTONG__IDHDTo__74AE54BC" FromRole="HDTONG" ToRole="CTHDTONG" />
+          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK__HDTONG__IDKH__71D1E811" FromRole="HDTONG" ToRole="KHACHHANG" />
         </EntityType>
         <EntityType Name="KHACHHANG">
           <Key>
@@ -552,9 +552,9 @@
           <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="VaiTro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NgayTaoTK" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="HDDATSANs" Relationship="Self.FK__HDDATSAN__IDKhac__4316F928" FromRole="KHACHHANG" ToRole="HDDATSAN" />
-          <NavigationProperty Name="HDSPs" Relationship="Self.FK__HDSP__IDKhachHan__59FA5E80" FromRole="KHACHHANG" ToRole="HDSP" />
-          <NavigationProperty Name="HDTONGs" Relationship="Self.FK__HDTONG__IDKH__60A75C0F" FromRole="KHACHHANG" ToRole="HDTONG" />
+          <NavigationProperty Name="HDDATSANs" Relationship="Self.FK__HDDATSAN__IDKhac__5441852A" FromRole="KHACHHANG" ToRole="HDDATSAN" />
+          <NavigationProperty Name="HDSPs" Relationship="Self.FK__HDSP__IDKhachHan__6B24EA82" FromRole="KHACHHANG" ToRole="HDSP" />
+          <NavigationProperty Name="HDTONGs" Relationship="Self.FK__HDTONG__IDKH__71D1E811" FromRole="KHACHHANG" ToRole="HDTONG" />
         </EntityType>
         <EntityType Name="KHUYENMAI">
           <Key>
@@ -569,8 +569,8 @@
           <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="GiaTriGiam" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="SAN" Relationship="Self.FK__KHUYENMAI__IDSan__66603565" FromRole="KHUYENMAI" ToRole="SAN" />
-          <NavigationProperty Name="SUKIEN" Relationship="Self.FK__KHUYENMAI__IDSuK__6754599E" FromRole="KHUYENMAI" ToRole="SUKIEN" />
+          <NavigationProperty Name="SAN" Relationship="Self.FK__KHUYENMAI__IDSan__628FA481" FromRole="KHUYENMAI" ToRole="SAN" />
+          <NavigationProperty Name="SUKIEN" Relationship="Self.FK__KHUYENMAI__IDSuK__6383C8BA" FromRole="KHUYENMAI" ToRole="SUKIEN" />
         </EntityType>
         <EntityType Name="LOAISAN">
           <Key>
@@ -579,7 +579,7 @@
           <Property Name="IDLoaiSan" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenLoaiSan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="SANs" Relationship="Self.FK__SAN__IDLoaiSan__3F466844" FromRole="LOAISAN" ToRole="SAN" />
+          <NavigationProperty Name="SANs" Relationship="Self.FK__SAN__IDLoaiSan__5165187F" FromRole="LOAISAN" ToRole="SAN" />
         </EntityType>
         <EntityType Name="LSPFOOD">
           <Key>
@@ -588,7 +588,7 @@
           <Property Name="IDLoaiSP" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenLoaiSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="SPFOODs" Relationship="Self.FK__SPFOOD__IDLoaiSP__6C190EBB" FromRole="LSPFOOD" ToRole="SPFOOD" />
+          <NavigationProperty Name="SPFOODs" Relationship="Self.FK__SPFOOD__IDLoaiSP__68487DD7" FromRole="LSPFOOD" ToRole="SPFOOD" />
         </EntityType>
         <EntityType Name="NHANVIEN">
           <Key>
@@ -605,8 +605,8 @@
           <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="VaiTro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NgayVaoLam" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="CALAMVIECs" Relationship="Self.FK__CALAMVIEC__IDNha__49C3F6B7" FromRole="NHANVIEN" ToRole="CALAMVIEC" />
-          <NavigationProperty Name="TINHLUONGs" Relationship="Self.FK__TINHLUONG__IDNha__4CA06362" FromRole="NHANVIEN" ToRole="TINHLUONG" />
+          <NavigationProperty Name="CALAMVIECs" Relationship="Self.FK__CALAMVIEC__IDNha__5AEE82B9" FromRole="NHANVIEN" ToRole="CALAMVIEC" />
+          <NavigationProperty Name="TINHLUONGs" Relationship="Self.FK__TINHLUONG__IDNha__5DCAEF64" FromRole="NHANVIEN" ToRole="TINHLUONG" />
         </EntityType>
         <EntityType Name="QUANTRIVIEN">
           <Key>
@@ -633,9 +633,9 @@
           <Property Name="DonGia" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TinhTrang" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="CTHDDATSANs" Relationship="Self.FK__CTHDDATSA__IDSan__46E78A0C" FromRole="SAN" ToRole="CTHDDATSAN" />
-          <NavigationProperty Name="KHUYENMAIs" Relationship="Self.FK__KHUYENMAI__IDSan__66603565" FromRole="SAN" ToRole="KHUYENMAI" />
-          <NavigationProperty Name="LOAISAN" Relationship="Self.FK__SAN__IDLoaiSan__3F466844" FromRole="SAN" ToRole="LOAISAN" />
+          <NavigationProperty Name="CTHDDATSANs" Relationship="Self.FK__CTHDDATSA__IDSan__5812160E" FromRole="SAN" ToRole="CTHDDATSAN" />
+          <NavigationProperty Name="KHUYENMAIs" Relationship="Self.FK__KHUYENMAI__IDSan__628FA481" FromRole="SAN" ToRole="KHUYENMAI" />
+          <NavigationProperty Name="LOAISAN" Relationship="Self.FK__SAN__IDLoaiSan__5165187F" FromRole="SAN" ToRole="LOAISAN" />
         </EntityType>
         <EntityType Name="SPFOOD">
           <Key>
@@ -647,8 +647,8 @@
           <Property Name="DonGia" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="CTHDSPs" Relationship="Self.FK__CTHDSP__IDSP__6FE99F9F" FromRole="SPFOOD" ToRole="CTHDSP" />
-          <NavigationProperty Name="LSPFOOD" Relationship="Self.FK__SPFOOD__IDLoaiSP__6C190EBB" FromRole="SPFOOD" ToRole="LSPFOOD" />
+          <NavigationProperty Name="CTHDSPs" Relationship="Self.FK__CTHDSP__IDSP__6EF57B66" FromRole="SPFOOD" ToRole="CTHDSP" />
+          <NavigationProperty Name="LSPFOOD" Relationship="Self.FK__SPFOOD__IDLoaiSP__68487DD7" FromRole="SPFOOD" ToRole="LSPFOOD" />
         </EntityType>
         <EntityType Name="SUKIEN">
           <Key>
@@ -660,7 +660,7 @@
           <Property Name="NgayBatDauSK" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="NgayKetThucSK" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="KHUYENMAIs" Relationship="Self.FK__KHUYENMAI__IDSuK__6754599E" FromRole="SUKIEN" ToRole="KHUYENMAI" />
+          <NavigationProperty Name="KHUYENMAIs" Relationship="Self.FK__KHUYENMAI__IDSuK__6383C8BA" FromRole="SUKIEN" ToRole="KHUYENMAI" />
         </EntityType>
         <EntityType Name="TINHLUONG">
           <Key>
@@ -673,9 +673,9 @@
           <Property Name="TongSoGio" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="LuongTrenGio" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="TongLuong" Type="Decimal" Precision="10" Scale="2" />
-          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__TINHLUONG__IDNha__4CA06362" FromRole="TINHLUONG" ToRole="NHANVIEN" />
+          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__TINHLUONG__IDNha__5DCAEF64" FromRole="TINHLUONG" ToRole="NHANVIEN" />
         </EntityType>
-        <Association Name="FK__CALAMVIEC__IDNha__49C3F6B7">
+        <Association Name="FK__CALAMVIEC__IDNha__5AEE82B9">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="CALAMVIEC" Type="Self.CALAMVIEC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -687,7 +687,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CTHDDATSA__IDHDD__45F365D3">
+        <Association Name="FK__CTHDDATSA__IDHDD__571DF1D5">
           <End Role="HDDATSAN" Type="Self.HDDATSAN" Multiplicity="1" />
           <End Role="CTHDDATSAN" Type="Self.CTHDDATSAN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -699,7 +699,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CTHDDATSA__IDSan__46E78A0C">
+        <Association Name="FK__CTHDDATSA__IDSan__5812160E">
           <End Role="SAN" Type="Self.SAN" Multiplicity="1" />
           <End Role="CTHDDATSAN" Type="Self.CTHDDATSAN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -711,7 +711,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CTHDSP__IDHDSP__6EF57B66">
+        <Association Name="FK__CTHDSP__IDHDSP__6E01572D">
           <End Role="HDSP" Type="Self.HDSP" Multiplicity="1" />
           <End Role="CTHDSP" Type="Self.CTHDSP" Multiplicity="*" />
           <ReferentialConstraint>
@@ -723,7 +723,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CTHDSP__IDSP__6FE99F9F">
+        <Association Name="FK__CTHDSP__IDSP__6EF57B66">
           <End Role="SPFOOD" Type="Self.SPFOOD" Multiplicity="1" />
           <End Role="CTHDSP" Type="Self.CTHDSP" Multiplicity="*" />
           <ReferentialConstraint>
@@ -735,7 +735,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CTHDTONG__IDHDTo__6383C8BA">
+        <Association Name="FK__CTHDTONG__IDHDTo__74AE54BC">
           <End Role="HDTONG" Type="Self.HDTONG" Multiplicity="1" />
           <End Role="CTHDTONG" Type="Self.CTHDTONG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -747,7 +747,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__HDDATSAN__IDKhac__4316F928">
+        <Association Name="FK__HDDATSAN__IDKhac__5441852A">
           <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
           <End Role="HDDATSAN" Type="Self.HDDATSAN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -759,7 +759,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__HDSP__IDKhachHan__59FA5E80">
+        <Association Name="FK__HDSP__IDKhachHan__6B24EA82">
           <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
           <End Role="HDSP" Type="Self.HDSP" Multiplicity="*" />
           <ReferentialConstraint>
@@ -771,7 +771,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__HDTONG__IDKH__60A75C0F">
+        <Association Name="FK__HDTONG__IDKH__71D1E811">
           <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
           <End Role="HDTONG" Type="Self.HDTONG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -783,7 +783,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__KHUYENMAI__IDSan__66603565">
+        <Association Name="FK__KHUYENMAI__IDSan__628FA481">
           <End Role="SAN" Type="Self.SAN" Multiplicity="1" />
           <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -795,7 +795,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__KHUYENMAI__IDSuK__6754599E">
+        <Association Name="FK__KHUYENMAI__IDSuK__6383C8BA">
           <End Role="SUKIEN" Type="Self.SUKIEN" Multiplicity="1" />
           <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
           <ReferentialConstraint>
@@ -807,7 +807,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SAN__IDLoaiSan__3F466844">
+        <Association Name="FK__SAN__IDLoaiSan__5165187F">
           <End Role="LOAISAN" Type="Self.LOAISAN" Multiplicity="1" />
           <End Role="SAN" Type="Self.SAN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -819,7 +819,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SPFOOD__IDLoaiSP__6C190EBB">
+        <Association Name="FK__SPFOOD__IDLoaiSP__68487DD7">
           <End Role="LSPFOOD" Type="Self.LSPFOOD" Multiplicity="1" />
           <End Role="SPFOOD" Type="Self.SPFOOD" Multiplicity="*" />
           <ReferentialConstraint>
@@ -831,7 +831,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TINHLUONG__IDNha__4CA06362">
+        <Association Name="FK__TINHLUONG__IDNha__5DCAEF64">
           <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
           <End Role="TINHLUONG" Type="Self.TINHLUONG" Multiplicity="*" />
           <ReferentialConstraint>
@@ -861,59 +861,59 @@
           <EntitySet Name="SPFOODs" EntityType="Self.SPFOOD" />
           <EntitySet Name="SUKIENs" EntityType="Self.SUKIEN" />
           <EntitySet Name="TINHLUONGs" EntityType="Self.TINHLUONG" />
-          <AssociationSet Name="FK__CALAMVIEC__IDNha__49C3F6B7" Association="Self.FK__CALAMVIEC__IDNha__49C3F6B7">
+          <AssociationSet Name="FK__CALAMVIEC__IDNha__5AEE82B9" Association="Self.FK__CALAMVIEC__IDNha__5AEE82B9">
             <End Role="NHANVIEN" EntitySet="NHANVIENs" />
             <End Role="CALAMVIEC" EntitySet="CALAMVIECs" />
           </AssociationSet>
-          <AssociationSet Name="FK__CTHDDATSA__IDHDD__45F365D3" Association="Self.FK__CTHDDATSA__IDHDD__45F365D3">
+          <AssociationSet Name="FK__CTHDDATSA__IDHDD__571DF1D5" Association="Self.FK__CTHDDATSA__IDHDD__571DF1D5">
             <End Role="HDDATSAN" EntitySet="HDDATSANs" />
             <End Role="CTHDDATSAN" EntitySet="CTHDDATSANs" />
           </AssociationSet>
-          <AssociationSet Name="FK__CTHDDATSA__IDSan__46E78A0C" Association="Self.FK__CTHDDATSA__IDSan__46E78A0C">
+          <AssociationSet Name="FK__CTHDDATSA__IDSan__5812160E" Association="Self.FK__CTHDDATSA__IDSan__5812160E">
             <End Role="SAN" EntitySet="SANs" />
             <End Role="CTHDDATSAN" EntitySet="CTHDDATSANs" />
           </AssociationSet>
-          <AssociationSet Name="FK__CTHDSP__IDHDSP__6EF57B66" Association="Self.FK__CTHDSP__IDHDSP__6EF57B66">
+          <AssociationSet Name="FK__CTHDSP__IDHDSP__6E01572D" Association="Self.FK__CTHDSP__IDHDSP__6E01572D">
             <End Role="HDSP" EntitySet="HDSPs" />
             <End Role="CTHDSP" EntitySet="CTHDSPs" />
           </AssociationSet>
-          <AssociationSet Name="FK__CTHDSP__IDSP__6FE99F9F" Association="Self.FK__CTHDSP__IDSP__6FE99F9F">
+          <AssociationSet Name="FK__CTHDSP__IDSP__6EF57B66" Association="Self.FK__CTHDSP__IDSP__6EF57B66">
             <End Role="SPFOOD" EntitySet="SPFOODs" />
             <End Role="CTHDSP" EntitySet="CTHDSPs" />
           </AssociationSet>
-          <AssociationSet Name="FK__CTHDTONG__IDHDTo__6383C8BA" Association="Self.FK__CTHDTONG__IDHDTo__6383C8BA">
+          <AssociationSet Name="FK__CTHDTONG__IDHDTo__74AE54BC" Association="Self.FK__CTHDTONG__IDHDTo__74AE54BC">
             <End Role="HDTONG" EntitySet="HDTONGs" />
             <End Role="CTHDTONG" EntitySet="CTHDTONGs" />
           </AssociationSet>
-          <AssociationSet Name="FK__HDDATSAN__IDKhac__4316F928" Association="Self.FK__HDDATSAN__IDKhac__4316F928">
+          <AssociationSet Name="FK__HDDATSAN__IDKhac__5441852A" Association="Self.FK__HDDATSAN__IDKhac__5441852A">
             <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
             <End Role="HDDATSAN" EntitySet="HDDATSANs" />
           </AssociationSet>
-          <AssociationSet Name="FK__HDSP__IDKhachHan__59FA5E80" Association="Self.FK__HDSP__IDKhachHan__59FA5E80">
+          <AssociationSet Name="FK__HDSP__IDKhachHan__6B24EA82" Association="Self.FK__HDSP__IDKhachHan__6B24EA82">
             <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
             <End Role="HDSP" EntitySet="HDSPs" />
           </AssociationSet>
-          <AssociationSet Name="FK__HDTONG__IDKH__60A75C0F" Association="Self.FK__HDTONG__IDKH__60A75C0F">
+          <AssociationSet Name="FK__HDTONG__IDKH__71D1E811" Association="Self.FK__HDTONG__IDKH__71D1E811">
             <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
             <End Role="HDTONG" EntitySet="HDTONGs" />
           </AssociationSet>
-          <AssociationSet Name="FK__KHUYENMAI__IDSan__66603565" Association="Self.FK__KHUYENMAI__IDSan__66603565">
+          <AssociationSet Name="FK__KHUYENMAI__IDSan__628FA481" Association="Self.FK__KHUYENMAI__IDSan__628FA481">
             <End Role="SAN" EntitySet="SANs" />
             <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
           </AssociationSet>
-          <AssociationSet Name="FK__KHUYENMAI__IDSuK__6754599E" Association="Self.FK__KHUYENMAI__IDSuK__6754599E">
+          <AssociationSet Name="FK__KHUYENMAI__IDSuK__6383C8BA" Association="Self.FK__KHUYENMAI__IDSuK__6383C8BA">
             <End Role="SUKIEN" EntitySet="SUKIENs" />
             <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
           </AssociationSet>
-          <AssociationSet Name="FK__SAN__IDLoaiSan__3F466844" Association="Self.FK__SAN__IDLoaiSan__3F466844">
+          <AssociationSet Name="FK__SAN__IDLoaiSan__5165187F" Association="Self.FK__SAN__IDLoaiSan__5165187F">
             <End Role="LOAISAN" EntitySet="LOAISANs" />
             <End Role="SAN" EntitySet="SANs" />
           </AssociationSet>
-          <AssociationSet Name="FK__SPFOOD__IDLoaiSP__6C190EBB" Association="Self.FK__SPFOOD__IDLoaiSP__6C190EBB">
+          <AssociationSet Name="FK__SPFOOD__IDLoaiSP__68487DD7" Association="Self.FK__SPFOOD__IDLoaiSP__68487DD7">
             <End Role="LSPFOOD" EntitySet="LSPFOODs" />
             <End Role="SPFOOD" EntitySet="SPFOODs" />
           </AssociationSet>
-          <AssociationSet Name="FK__TINHLUONG__IDNha__4CA06362" Association="Self.FK__TINHLUONG__IDNha__4CA06362">
+          <AssociationSet Name="FK__TINHLUONG__IDNha__5DCAEF64" Association="Self.FK__TINHLUONG__IDNha__5DCAEF64">
             <End Role="NHANVIEN" EntitySet="NHANVIENs" />
             <End Role="TINHLUONG" EntitySet="TINHLUONGs" />
           </AssociationSet>

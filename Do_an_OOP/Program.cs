@@ -16,7 +16,7 @@ namespace Do_an_OOP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FQLNhanVien());
+            Application.Run(new FChonQuyen());
         }
     }
 }
