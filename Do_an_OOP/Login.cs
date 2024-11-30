@@ -16,5 +16,27 @@ namespace Do_an_OOP
         {
             InitializeComponent();
         }
+
+        private void guna2GradientTileButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            FChonQuyen fcq = new FChonQuyen();
+            this.Hide();
+            fcq.Show();
+        }
     }
 }
