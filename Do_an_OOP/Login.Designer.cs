@@ -162,7 +162,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(-3, 0);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(149, 30);
+            this.guna2Button1.Size = new System.Drawing.Size(144, 30);
             this.guna2Button1.TabIndex = 8;
             this.guna2Button1.Text = "< Quay lại chọn quyền";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
