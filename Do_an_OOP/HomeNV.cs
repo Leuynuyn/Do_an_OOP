@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Do_an_OOP
 {
-    public partial class Form1 : Form
+    public partial class HomeNV : Form
     {
-        public Form1()
+        public HomeNV()
         {
             InitializeComponent();
         }
