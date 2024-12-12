@@ -1,0 +1,1118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HeThongDatSanTheThaoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CALAMVIEC">
+          <Key>
+            <PropertyRef Name="IDCaLamViec" />
+          </Key>
+          <Property Name="IDCaLamViec" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="IDLoaiCa" Type="varchar" MaxLength="9" />
+          <Property Name="IDNhanVien" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="NgayLam" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CTHDDATSAN">
+          <Key>
+            <PropertyRef Name="IDCTHDDatSan" />
+          </Key>
+          <Property Name="IDCTHDDatSan" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="IDHDDatSan" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="IDSan" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="NgayDat" Type="date" Nullable="false" />
+          <Property Name="GioBatDau" Type="datetime" Nullable="false" />
+          <Property Name="GioKetThuc" Type="datetime" Nullable="false" />
+          <Property Name="DonGia" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="CTHDSP">
+          <Key>
+            <PropertyRef Name="IDCTHDSP" />
+          </Key>
+          <Property Name="IDCTHDSP" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="IDHDSP" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="IDSP" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="SoLuong" Type="int" />
+          <Property Name="DonGia" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="ThanhTien" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="CTHDTONG">
+          <Key>
+            <PropertyRef Name="IDCTHDTong" />
+          </Key>
+          <Property Name="IDCTHDTong" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="IDHDTong" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="LoaiHoaDon" Type="varchar" MaxLength="10" />
+          <Property Name="IDHoaDonCon" Type="varchar" MaxLength="9" />
+          <Property Name="TongHoaDonCon" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="TongTienHDCon" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="HDDATSAN">
+          <Key>
+            <PropertyRef Name="IDHDDatSan" />
+          </Key>
+          <Property Name="IDHDDatSan" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="IDKhachHang" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="NgayLapHD" Type="date" />
+          <Property Name="TienCoc" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="TongTien" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HDSP">
+          <Key>
+            <PropertyRef Name="IDHDSP" />
+          </Key>
+          <Property Name="IDHDSP" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="IDKhachHang" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="NgayLap" Type="date" />
+          <Property Name="TongTien" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="HDTONG">
+          <Key>
+            <PropertyRef Name="IDHDTong" />
+          </Key>
+          <Property Name="IDHDTong" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="IDKH" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="NgayLap" Type="date" />
+          <Property Name="TongTienTra" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="KHACHHANG">
+          <Key>
+            <PropertyRef Name="IDKhachHang" />
+          </Key>
+          <Property Name="IDKhachHang" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="TenKhachHang" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenTaiKhoan" Type="nvarchar" MaxLength="50" />
+          <Property Name="MatKhau" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="NgaySinh" Type="date" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="SDT" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+          <Property Name="VaiTro" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NgayTaoTK" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOAICALAM">
+          <Key>
+            <PropertyRef Name="IDLoaiCa" />
+          </Key>
+          <Property Name="IDLoaiCa" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="TenCa" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="GioBatDau" Type="time" Precision="7" Nullable="false" />
+          <Property Name="GioKetThuc" Type="time" Precision="7" Nullable="false" />
+          <Property Name="LuongTheoGio" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="TongGioCa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOAISAN">
+          <Key>
+            <PropertyRef Name="IDLoaiSan" />
+          </Key>
+          <Property Name="IDLoaiSan" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="TenLoaiSan" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MoTa" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="LSPFOOD">
+          <Key>
+            <PropertyRef Name="IDLoaiSP" />
+          </Key>
+          <Property Name="IDLoaiSP" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="TenLoaiSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="MoTa" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="NHANVIEN">
+          <Key>
+            <PropertyRef Name="IDNhanVien" />
+          </Key>
+          <Property Name="IDNhanVien" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="TenNhanVien" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenTaiKhoan" Type="nvarchar" MaxLength="50" />
+          <Property Name="MatKhau" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="NgaySinh" Type="date" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="SDT" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+          <Property Name="VaiTro" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NgayVaoLam" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QUANTRIVIEN">
+          <Key>
+            <PropertyRef Name="IDAdmin" />
+          </Key>
+          <Property Name="IDAdmin" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="TenAdmin" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenTaiKhoan" Type="nvarchar" MaxLength="50" />
+          <Property Name="MatKhau" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="NgaySinh" Type="date" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="SDT" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+          <Property Name="VaiTro" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SAN">
+          <Key>
+            <PropertyRef Name="IDSan" />
+          </Key>
+          <Property Name="IDSan" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="IDLoaiSan" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="TenSan" Type="nvarchar" MaxLength="50" />
+          <Property Name="DonGia" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TinhTrangHienTai" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SPFOOD">
+          <Key>
+            <PropertyRef Name="IDSP" />
+          </Key>
+          <Property Name="IDSP" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="IDLoaiSP" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="TenSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="DonGia" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="MoTa" Type="nvarchar" MaxLength="100" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SUKIENKHUYENMAI">
+          <Key>
+            <PropertyRef Name="IDSuKien" />
+          </Key>
+          <Property Name="IDSuKien" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="TenSuKien" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="GiaTriGiam" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="MaCodeKM" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="MoTa" Type="nvarchar" MaxLength="100" />
+          <Property Name="NgayBatDauSK" Type="datetime" Nullable="false" />
+          <Property Name="NgayKetThucSK" Type="datetime" Nullable="false" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TINHLUONG">
+          <Key>
+            <PropertyRef Name="IDLuong" />
+          </Key>
+          <Property Name="IDLuong" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="IDNhanVien" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="Thang" Type="int" Nullable="false" />
+          <Property Name="Nam" Type="int" Nullable="false" />
+          <Property Name="TongSoGio" Type="int" />
+          <Property Name="TongLuong" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <Association Name="FK__CALAMVIEC__IDLoa__4BAC3F29">
+          <End Role="LOAICALAM" Type="Self.LOAICALAM" Multiplicity="0..1" />
+          <End Role="CALAMVIEC" Type="Self.CALAMVIEC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOAICALAM">
+              <PropertyRef Name="IDLoaiCa" />
+            </Principal>
+            <Dependent Role="CALAMVIEC">
+              <PropertyRef Name="IDLoaiCa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CALAMVIEC__IDNha__4AB81AF0">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
+          <End Role="CALAMVIEC" Type="Self.CALAMVIEC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="IDNhanVien" />
+            </Principal>
+            <Dependent Role="CALAMVIEC">
+              <PropertyRef Name="IDNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTHDDATSA__IDHDD__44FF419A">
+          <End Role="HDDATSAN" Type="Self.HDDATSAN" Multiplicity="1" />
+          <End Role="CTHDDATSAN" Type="Self.CTHDDATSAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDDATSAN">
+              <PropertyRef Name="IDHDDatSan" />
+            </Principal>
+            <Dependent Role="CTHDDATSAN">
+              <PropertyRef Name="IDHDDatSan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTHDDATSA__IDSan__45F365D3">
+          <End Role="SAN" Type="Self.SAN" Multiplicity="1" />
+          <End Role="CTHDDATSAN" Type="Self.CTHDDATSAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SAN">
+              <PropertyRef Name="IDSan" />
+            </Principal>
+            <Dependent Role="CTHDDATSAN">
+              <PropertyRef Name="IDSan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTHDSP__IDHDSP__5BE2A6F2">
+          <End Role="HDSP" Type="Self.HDSP" Multiplicity="1" />
+          <End Role="CTHDSP" Type="Self.CTHDSP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDSP">
+              <PropertyRef Name="IDHDSP" />
+            </Principal>
+            <Dependent Role="CTHDSP">
+              <PropertyRef Name="IDHDSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTHDSP__IDSP__5CD6CB2B">
+          <End Role="SPFOOD" Type="Self.SPFOOD" Multiplicity="1" />
+          <End Role="CTHDSP" Type="Self.CTHDSP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SPFOOD">
+              <PropertyRef Name="IDSP" />
+            </Principal>
+            <Dependent Role="CTHDSP">
+              <PropertyRef Name="IDSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTHDTONG__IDHDTo__628FA481">
+          <End Role="HDTONG" Type="Self.HDTONG" Multiplicity="1" />
+          <End Role="CTHDTONG" Type="Self.CTHDTONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDTONG">
+              <PropertyRef Name="IDHDTong" />
+            </Principal>
+            <Dependent Role="CTHDTONG">
+              <PropertyRef Name="IDHDTong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDDATSAN__IDKhac__4222D4EF">
+          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+          <End Role="HDDATSAN" Type="Self.HDDATSAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACHHANG">
+              <PropertyRef Name="IDKhachHang" />
+            </Principal>
+            <Dependent Role="HDDATSAN">
+              <PropertyRef Name="IDKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDSP__IDKhachHan__59063A47">
+          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+          <End Role="HDSP" Type="Self.HDSP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACHHANG">
+              <PropertyRef Name="IDKhachHang" />
+            </Principal>
+            <Dependent Role="HDSP">
+              <PropertyRef Name="IDKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDTONG__IDKH__5FB337D6">
+          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+          <End Role="HDTONG" Type="Self.HDTONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACHHANG">
+              <PropertyRef Name="IDKhachHang" />
+            </Principal>
+            <Dependent Role="HDTONG">
+              <PropertyRef Name="IDKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SAN__IDLoaiSan__3F466844">
+          <End Role="LOAISAN" Type="Self.LOAISAN" Multiplicity="1" />
+          <End Role="SAN" Type="Self.SAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOAISAN">
+              <PropertyRef Name="IDLoaiSan" />
+            </Principal>
+            <Dependent Role="SAN">
+              <PropertyRef Name="IDLoaiSan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SPFOOD__IDLoaiSP__5629CD9C">
+          <End Role="LSPFOOD" Type="Self.LSPFOOD" Multiplicity="1" />
+          <End Role="SPFOOD" Type="Self.SPFOOD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LSPFOOD">
+              <PropertyRef Name="IDLoaiSP" />
+            </Principal>
+            <Dependent Role="SPFOOD">
+              <PropertyRef Name="IDLoaiSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TINHLUONG__IDNha__4F7CD00D">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
+          <End Role="TINHLUONG" Type="Self.TINHLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="IDNhanVien" />
+            </Principal>
+            <Dependent Role="TINHLUONG">
+              <PropertyRef Name="IDNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HeThongDatSanTheThaoModelStoreContainer">
+          <EntitySet Name="CALAMVIEC" EntityType="Self.CALAMVIEC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CTHDDATSAN" EntityType="Self.CTHDDATSAN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CTHDSP" EntityType="Self.CTHDSP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CTHDTONG" EntityType="Self.CTHDTONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HDDATSAN" EntityType="Self.HDDATSAN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HDSP" EntityType="Self.HDSP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HDTONG" EntityType="Self.HDTONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOAICALAM" EntityType="Self.LOAICALAM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOAISAN" EntityType="Self.LOAISAN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LSPFOOD" EntityType="Self.LSPFOOD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QUANTRIVIEN" EntityType="Self.QUANTRIVIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SAN" EntityType="Self.SAN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SPFOOD" EntityType="Self.SPFOOD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SUKIENKHUYENMAI" EntityType="Self.SUKIENKHUYENMAI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TINHLUONG" EntityType="Self.TINHLUONG" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CALAMVIEC__IDLoa__4BAC3F29" Association="Self.FK__CALAMVIEC__IDLoa__4BAC3F29">
+            <End Role="LOAICALAM" EntitySet="LOAICALAM" />
+            <End Role="CALAMVIEC" EntitySet="CALAMVIEC" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CALAMVIEC__IDNha__4AB81AF0" Association="Self.FK__CALAMVIEC__IDNha__4AB81AF0">
+            <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+            <End Role="CALAMVIEC" EntitySet="CALAMVIEC" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTHDDATSA__IDHDD__44FF419A" Association="Self.FK__CTHDDATSA__IDHDD__44FF419A">
+            <End Role="HDDATSAN" EntitySet="HDDATSAN" />
+            <End Role="CTHDDATSAN" EntitySet="CTHDDATSAN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTHDDATSA__IDSan__45F365D3" Association="Self.FK__CTHDDATSA__IDSan__45F365D3">
+            <End Role="SAN" EntitySet="SAN" />
+            <End Role="CTHDDATSAN" EntitySet="CTHDDATSAN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTHDSP__IDHDSP__5BE2A6F2" Association="Self.FK__CTHDSP__IDHDSP__5BE2A6F2">
+            <End Role="HDSP" EntitySet="HDSP" />
+            <End Role="CTHDSP" EntitySet="CTHDSP" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTHDSP__IDSP__5CD6CB2B" Association="Self.FK__CTHDSP__IDSP__5CD6CB2B">
+            <End Role="SPFOOD" EntitySet="SPFOOD" />
+            <End Role="CTHDSP" EntitySet="CTHDSP" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTHDTONG__IDHDTo__628FA481" Association="Self.FK__CTHDTONG__IDHDTo__628FA481">
+            <End Role="HDTONG" EntitySet="HDTONG" />
+            <End Role="CTHDTONG" EntitySet="CTHDTONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDDATSAN__IDKhac__4222D4EF" Association="Self.FK__HDDATSAN__IDKhac__4222D4EF">
+            <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+            <End Role="HDDATSAN" EntitySet="HDDATSAN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDSP__IDKhachHan__59063A47" Association="Self.FK__HDSP__IDKhachHan__59063A47">
+            <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+            <End Role="HDSP" EntitySet="HDSP" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDTONG__IDKH__5FB337D6" Association="Self.FK__HDTONG__IDKH__5FB337D6">
+            <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+            <End Role="HDTONG" EntitySet="HDTONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SAN__IDLoaiSan__3F466844" Association="Self.FK__SAN__IDLoaiSan__3F466844">
+            <End Role="LOAISAN" EntitySet="LOAISAN" />
+            <End Role="SAN" EntitySet="SAN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SPFOOD__IDLoaiSP__5629CD9C" Association="Self.FK__SPFOOD__IDLoaiSP__5629CD9C">
+            <End Role="LSPFOOD" EntitySet="LSPFOOD" />
+            <End Role="SPFOOD" EntitySet="SPFOOD" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TINHLUONG__IDNha__4F7CD00D" Association="Self.FK__TINHLUONG__IDNha__4F7CD00D">
+            <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+            <End Role="TINHLUONG" EntitySet="TINHLUONG" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HeThongDatSanTheThaoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CALAMVIEC">
+          <Key>
+            <PropertyRef Name="IDCaLamViec" />
+          </Key>
+          <Property Name="IDCaLamViec" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDLoaiCa" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="IDNhanVien" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NgayLam" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="LOAICALAM" Relationship="Self.FK__CALAMVIEC__IDLoa__4BAC3F29" FromRole="CALAMVIEC" ToRole="LOAICALAM" />
+          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__CALAMVIEC__IDNha__4AB81AF0" FromRole="CALAMVIEC" ToRole="NHANVIEN" />
+        </EntityType>
+        <EntityType Name="CTHDDATSAN">
+          <Key>
+            <PropertyRef Name="IDCTHDDatSan" />
+          </Key>
+          <Property Name="IDCTHDDatSan" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDHDDatSan" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDSan" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NgayDat" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="GioBatDau" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="GioKetThuc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DonGia" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="HDDATSAN" Relationship="Self.FK__CTHDDATSA__IDHDD__44FF419A" FromRole="CTHDDATSAN" ToRole="HDDATSAN" />
+          <NavigationProperty Name="SAN" Relationship="Self.FK__CTHDDATSA__IDSan__45F365D3" FromRole="CTHDDATSAN" ToRole="SAN" />
+        </EntityType>
+        <EntityType Name="CTHDSP">
+          <Key>
+            <PropertyRef Name="IDCTHDSP" />
+          </Key>
+          <Property Name="IDCTHDSP" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDHDSP" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDSP" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" />
+          <Property Name="DonGia" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ThanhTien" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="HDSP" Relationship="Self.FK__CTHDSP__IDHDSP__5BE2A6F2" FromRole="CTHDSP" ToRole="HDSP" />
+          <NavigationProperty Name="SPFOOD" Relationship="Self.FK__CTHDSP__IDSP__5CD6CB2B" FromRole="CTHDSP" ToRole="SPFOOD" />
+        </EntityType>
+        <EntityType Name="CTHDTONG">
+          <Key>
+            <PropertyRef Name="IDCTHDTong" />
+          </Key>
+          <Property Name="IDCTHDTong" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDHDTong" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LoaiHoaDon" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="IDHoaDonCon" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="TongHoaDonCon" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="TongTienHDCon" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="HDTONG" Relationship="Self.FK__CTHDTONG__IDHDTo__628FA481" FromRole="CTHDTONG" ToRole="HDTONG" />
+        </EntityType>
+        <EntityType Name="HDDATSAN">
+          <Key>
+            <PropertyRef Name="IDHDDatSan" />
+          </Key>
+          <Property Name="IDHDDatSan" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDKhachHang" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NgayLapHD" Type="DateTime" Precision="0" />
+          <Property Name="TienCoc" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="TongTien" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="TrangThai" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="CTHDDATSANs" Relationship="Self.FK__CTHDDATSA__IDHDD__44FF419A" FromRole="HDDATSAN" ToRole="CTHDDATSAN" />
+          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK__HDDATSAN__IDKhac__4222D4EF" FromRole="HDDATSAN" ToRole="KHACHHANG" />
+        </EntityType>
+        <EntityType Name="HDSP">
+          <Key>
+            <PropertyRef Name="IDHDSP" />
+          </Key>
+          <Property Name="IDHDSP" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDKhachHang" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NgayLap" Type="DateTime" Precision="0" />
+          <Property Name="TongTien" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="CTHDSPs" Relationship="Self.FK__CTHDSP__IDHDSP__5BE2A6F2" FromRole="HDSP" ToRole="CTHDSP" />
+          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK__HDSP__IDKhachHan__59063A47" FromRole="HDSP" ToRole="KHACHHANG" />
+        </EntityType>
+        <EntityType Name="HDTONG">
+          <Key>
+            <PropertyRef Name="IDHDTong" />
+          </Key>
+          <Property Name="IDHDTong" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDKH" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NgayLap" Type="DateTime" Precision="0" />
+          <Property Name="TongTienTra" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="CTHDTONGs" Relationship="Self.FK__CTHDTONG__IDHDTo__628FA481" FromRole="HDTONG" ToRole="CTHDTONG" />
+          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK__HDTONG__IDKH__5FB337D6" FromRole="HDTONG" ToRole="KHACHHANG" />
+        </EntityType>
+        <EntityType Name="KHACHHANG">
+          <Key>
+            <PropertyRef Name="IDKhachHang" />
+          </Key>
+          <Property Name="IDKhachHang" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenTaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="GioiTinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SDT" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VaiTro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NgayTaoTK" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="HDDATSANs" Relationship="Self.FK__HDDATSAN__IDKhac__4222D4EF" FromRole="KHACHHANG" ToRole="HDDATSAN" />
+          <NavigationProperty Name="HDSPs" Relationship="Self.FK__HDSP__IDKhachHan__59063A47" FromRole="KHACHHANG" ToRole="HDSP" />
+          <NavigationProperty Name="HDTONGs" Relationship="Self.FK__HDTONG__IDKH__5FB337D6" FromRole="KHACHHANG" ToRole="HDTONG" />
+        </EntityType>
+        <EntityType Name="LOAICALAM">
+          <Key>
+            <PropertyRef Name="IDLoaiCa" />
+          </Key>
+          <Property Name="IDLoaiCa" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenCa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GioBatDau" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="GioKetThuc" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="LuongTheoGio" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="TongGioCa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CALAMVIECs" Relationship="Self.FK__CALAMVIEC__IDLoa__4BAC3F29" FromRole="LOAICALAM" ToRole="CALAMVIEC" />
+        </EntityType>
+        <EntityType Name="LOAISAN">
+          <Key>
+            <PropertyRef Name="IDLoaiSan" />
+          </Key>
+          <Property Name="IDLoaiSan" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenLoaiSan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SANs" Relationship="Self.FK__SAN__IDLoaiSan__3F466844" FromRole="LOAISAN" ToRole="SAN" />
+        </EntityType>
+        <EntityType Name="LSPFOOD">
+          <Key>
+            <PropertyRef Name="IDLoaiSP" />
+          </Key>
+          <Property Name="IDLoaiSP" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenLoaiSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SPFOODs" Relationship="Self.FK__SPFOOD__IDLoaiSP__5629CD9C" FromRole="LSPFOOD" ToRole="SPFOOD" />
+        </EntityType>
+        <EntityType Name="NHANVIEN">
+          <Key>
+            <PropertyRef Name="IDNhanVien" />
+          </Key>
+          <Property Name="IDNhanVien" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenNhanVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenTaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="GioiTinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SDT" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VaiTro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NgayVaoLam" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="CALAMVIECs" Relationship="Self.FK__CALAMVIEC__IDNha__4AB81AF0" FromRole="NHANVIEN" ToRole="CALAMVIEC" />
+          <NavigationProperty Name="TINHLUONGs" Relationship="Self.FK__TINHLUONG__IDNha__4F7CD00D" FromRole="NHANVIEN" ToRole="TINHLUONG" />
+        </EntityType>
+        <EntityType Name="QUANTRIVIEN">
+          <Key>
+            <PropertyRef Name="IDAdmin" />
+          </Key>
+          <Property Name="IDAdmin" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenAdmin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenTaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="GioiTinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SDT" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VaiTro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SAN">
+          <Key>
+            <PropertyRef Name="IDSan" />
+          </Key>
+          <Property Name="IDSan" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDLoaiSan" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenSan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DonGia" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TinhTrangHienTai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CTHDDATSANs" Relationship="Self.FK__CTHDDATSA__IDSan__45F365D3" FromRole="SAN" ToRole="CTHDDATSAN" />
+          <NavigationProperty Name="LOAISAN" Relationship="Self.FK__SAN__IDLoaiSan__3F466844" FromRole="SAN" ToRole="LOAISAN" />
+        </EntityType>
+        <EntityType Name="SPFOOD">
+          <Key>
+            <PropertyRef Name="IDSP" />
+          </Key>
+          <Property Name="IDSP" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDLoaiSP" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DonGia" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CTHDSPs" Relationship="Self.FK__CTHDSP__IDSP__5CD6CB2B" FromRole="SPFOOD" ToRole="CTHDSP" />
+          <NavigationProperty Name="LSPFOOD" Relationship="Self.FK__SPFOOD__IDLoaiSP__5629CD9C" FromRole="SPFOOD" ToRole="LSPFOOD" />
+        </EntityType>
+        <EntityType Name="SUKIENKHUYENMAI">
+          <Key>
+            <PropertyRef Name="IDSuKien" />
+          </Key>
+          <Property Name="IDSuKien" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenSuKien" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GiaTriGiam" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="MaCodeKM" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NgayBatDauSK" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NgayKetThucSK" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TINHLUONG">
+          <Key>
+            <PropertyRef Name="IDLuong" />
+          </Key>
+          <Property Name="IDLuong" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDNhanVien" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Thang" Type="Int32" Nullable="false" />
+          <Property Name="Nam" Type="Int32" Nullable="false" />
+          <Property Name="TongSoGio" Type="Int32" />
+          <Property Name="TongLuong" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__TINHLUONG__IDNha__4F7CD00D" FromRole="TINHLUONG" ToRole="NHANVIEN" />
+        </EntityType>
+        <Association Name="FK__CALAMVIEC__IDLoa__4BAC3F29">
+          <End Role="LOAICALAM" Type="Self.LOAICALAM" Multiplicity="0..1" />
+          <End Role="CALAMVIEC" Type="Self.CALAMVIEC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOAICALAM">
+              <PropertyRef Name="IDLoaiCa" />
+            </Principal>
+            <Dependent Role="CALAMVIEC">
+              <PropertyRef Name="IDLoaiCa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CALAMVIEC__IDNha__4AB81AF0">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
+          <End Role="CALAMVIEC" Type="Self.CALAMVIEC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="IDNhanVien" />
+            </Principal>
+            <Dependent Role="CALAMVIEC">
+              <PropertyRef Name="IDNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTHDDATSA__IDHDD__44FF419A">
+          <End Role="HDDATSAN" Type="Self.HDDATSAN" Multiplicity="1" />
+          <End Role="CTHDDATSAN" Type="Self.CTHDDATSAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDDATSAN">
+              <PropertyRef Name="IDHDDatSan" />
+            </Principal>
+            <Dependent Role="CTHDDATSAN">
+              <PropertyRef Name="IDHDDatSan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTHDDATSA__IDSan__45F365D3">
+          <End Role="SAN" Type="Self.SAN" Multiplicity="1" />
+          <End Role="CTHDDATSAN" Type="Self.CTHDDATSAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SAN">
+              <PropertyRef Name="IDSan" />
+            </Principal>
+            <Dependent Role="CTHDDATSAN">
+              <PropertyRef Name="IDSan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTHDSP__IDHDSP__5BE2A6F2">
+          <End Role="HDSP" Type="Self.HDSP" Multiplicity="1" />
+          <End Role="CTHDSP" Type="Self.CTHDSP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDSP">
+              <PropertyRef Name="IDHDSP" />
+            </Principal>
+            <Dependent Role="CTHDSP">
+              <PropertyRef Name="IDHDSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTHDSP__IDSP__5CD6CB2B">
+          <End Role="SPFOOD" Type="Self.SPFOOD" Multiplicity="1" />
+          <End Role="CTHDSP" Type="Self.CTHDSP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SPFOOD">
+              <PropertyRef Name="IDSP" />
+            </Principal>
+            <Dependent Role="CTHDSP">
+              <PropertyRef Name="IDSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTHDTONG__IDHDTo__628FA481">
+          <End Role="HDTONG" Type="Self.HDTONG" Multiplicity="1" />
+          <End Role="CTHDTONG" Type="Self.CTHDTONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDTONG">
+              <PropertyRef Name="IDHDTong" />
+            </Principal>
+            <Dependent Role="CTHDTONG">
+              <PropertyRef Name="IDHDTong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDDATSAN__IDKhac__4222D4EF">
+          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+          <End Role="HDDATSAN" Type="Self.HDDATSAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACHHANG">
+              <PropertyRef Name="IDKhachHang" />
+            </Principal>
+            <Dependent Role="HDDATSAN">
+              <PropertyRef Name="IDKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDSP__IDKhachHan__59063A47">
+          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+          <End Role="HDSP" Type="Self.HDSP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACHHANG">
+              <PropertyRef Name="IDKhachHang" />
+            </Principal>
+            <Dependent Role="HDSP">
+              <PropertyRef Name="IDKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDTONG__IDKH__5FB337D6">
+          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+          <End Role="HDTONG" Type="Self.HDTONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACHHANG">
+              <PropertyRef Name="IDKhachHang" />
+            </Principal>
+            <Dependent Role="HDTONG">
+              <PropertyRef Name="IDKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SAN__IDLoaiSan__3F466844">
+          <End Role="LOAISAN" Type="Self.LOAISAN" Multiplicity="1" />
+          <End Role="SAN" Type="Self.SAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOAISAN">
+              <PropertyRef Name="IDLoaiSan" />
+            </Principal>
+            <Dependent Role="SAN">
+              <PropertyRef Name="IDLoaiSan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SPFOOD__IDLoaiSP__5629CD9C">
+          <End Role="LSPFOOD" Type="Self.LSPFOOD" Multiplicity="1" />
+          <End Role="SPFOOD" Type="Self.SPFOOD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LSPFOOD">
+              <PropertyRef Name="IDLoaiSP" />
+            </Principal>
+            <Dependent Role="SPFOOD">
+              <PropertyRef Name="IDLoaiSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TINHLUONG__IDNha__4F7CD00D">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
+          <End Role="TINHLUONG" Type="Self.TINHLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="IDNhanVien" />
+            </Principal>
+            <Dependent Role="TINHLUONG">
+              <PropertyRef Name="IDNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HeThongDatSanTheThaoEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CALAMVIECs" EntityType="Self.CALAMVIEC" />
+          <EntitySet Name="CTHDDATSANs" EntityType="Self.CTHDDATSAN" />
+          <EntitySet Name="CTHDSPs" EntityType="Self.CTHDSP" />
+          <EntitySet Name="CTHDTONGs" EntityType="Self.CTHDTONG" />
+          <EntitySet Name="HDDATSANs" EntityType="Self.HDDATSAN" />
+          <EntitySet Name="HDSPs" EntityType="Self.HDSP" />
+          <EntitySet Name="HDTONGs" EntityType="Self.HDTONG" />
+          <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
+          <EntitySet Name="LOAICALAMs" EntityType="Self.LOAICALAM" />
+          <EntitySet Name="LOAISANs" EntityType="Self.LOAISAN" />
+          <EntitySet Name="LSPFOODs" EntityType="Self.LSPFOOD" />
+          <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
+          <EntitySet Name="QUANTRIVIENs" EntityType="Self.QUANTRIVIEN" />
+          <EntitySet Name="SANs" EntityType="Self.SAN" />
+          <EntitySet Name="SPFOODs" EntityType="Self.SPFOOD" />
+          <EntitySet Name="SUKIENKHUYENMAIs" EntityType="Self.SUKIENKHUYENMAI" />
+          <EntitySet Name="TINHLUONGs" EntityType="Self.TINHLUONG" />
+          <AssociationSet Name="FK__CALAMVIEC__IDLoa__4BAC3F29" Association="Self.FK__CALAMVIEC__IDLoa__4BAC3F29">
+            <End Role="LOAICALAM" EntitySet="LOAICALAMs" />
+            <End Role="CALAMVIEC" EntitySet="CALAMVIECs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CALAMVIEC__IDNha__4AB81AF0" Association="Self.FK__CALAMVIEC__IDNha__4AB81AF0">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="CALAMVIEC" EntitySet="CALAMVIECs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTHDDATSA__IDHDD__44FF419A" Association="Self.FK__CTHDDATSA__IDHDD__44FF419A">
+            <End Role="HDDATSAN" EntitySet="HDDATSANs" />
+            <End Role="CTHDDATSAN" EntitySet="CTHDDATSANs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTHDDATSA__IDSan__45F365D3" Association="Self.FK__CTHDDATSA__IDSan__45F365D3">
+            <End Role="SAN" EntitySet="SANs" />
+            <End Role="CTHDDATSAN" EntitySet="CTHDDATSANs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTHDSP__IDHDSP__5BE2A6F2" Association="Self.FK__CTHDSP__IDHDSP__5BE2A6F2">
+            <End Role="HDSP" EntitySet="HDSPs" />
+            <End Role="CTHDSP" EntitySet="CTHDSPs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTHDSP__IDSP__5CD6CB2B" Association="Self.FK__CTHDSP__IDSP__5CD6CB2B">
+            <End Role="SPFOOD" EntitySet="SPFOODs" />
+            <End Role="CTHDSP" EntitySet="CTHDSPs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTHDTONG__IDHDTo__628FA481" Association="Self.FK__CTHDTONG__IDHDTo__628FA481">
+            <End Role="HDTONG" EntitySet="HDTONGs" />
+            <End Role="CTHDTONG" EntitySet="CTHDTONGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDDATSAN__IDKhac__4222D4EF" Association="Self.FK__HDDATSAN__IDKhac__4222D4EF">
+            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+            <End Role="HDDATSAN" EntitySet="HDDATSANs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDSP__IDKhachHan__59063A47" Association="Self.FK__HDSP__IDKhachHan__59063A47">
+            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+            <End Role="HDSP" EntitySet="HDSPs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDTONG__IDKH__5FB337D6" Association="Self.FK__HDTONG__IDKH__5FB337D6">
+            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+            <End Role="HDTONG" EntitySet="HDTONGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SAN__IDLoaiSan__3F466844" Association="Self.FK__SAN__IDLoaiSan__3F466844">
+            <End Role="LOAISAN" EntitySet="LOAISANs" />
+            <End Role="SAN" EntitySet="SANs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SPFOOD__IDLoaiSP__5629CD9C" Association="Self.FK__SPFOOD__IDLoaiSP__5629CD9C">
+            <End Role="LSPFOOD" EntitySet="LSPFOODs" />
+            <End Role="SPFOOD" EntitySet="SPFOODs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TINHLUONG__IDNha__4F7CD00D" Association="Self.FK__TINHLUONG__IDNha__4F7CD00D">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="TINHLUONG" EntitySet="TINHLUONGs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HeThongDatSanTheThaoModelStoreContainer" CdmEntityContainer="HeThongDatSanTheThaoEntities2">
+          <EntitySetMapping Name="CALAMVIECs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.CALAMVIEC">
+              <MappingFragment StoreEntitySet="CALAMVIEC">
+                <ScalarProperty Name="IDCaLamViec" ColumnName="IDCaLamViec" />
+                <ScalarProperty Name="IDLoaiCa" ColumnName="IDLoaiCa" />
+                <ScalarProperty Name="IDNhanVien" ColumnName="IDNhanVien" />
+                <ScalarProperty Name="NgayLam" ColumnName="NgayLam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CTHDDATSANs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.CTHDDATSAN">
+              <MappingFragment StoreEntitySet="CTHDDATSAN">
+                <ScalarProperty Name="IDCTHDDatSan" ColumnName="IDCTHDDatSan" />
+                <ScalarProperty Name="IDHDDatSan" ColumnName="IDHDDatSan" />
+                <ScalarProperty Name="IDSan" ColumnName="IDSan" />
+                <ScalarProperty Name="NgayDat" ColumnName="NgayDat" />
+                <ScalarProperty Name="GioBatDau" ColumnName="GioBatDau" />
+                <ScalarProperty Name="GioKetThuc" ColumnName="GioKetThuc" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CTHDSPs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.CTHDSP">
+              <MappingFragment StoreEntitySet="CTHDSP">
+                <ScalarProperty Name="IDCTHDSP" ColumnName="IDCTHDSP" />
+                <ScalarProperty Name="IDHDSP" ColumnName="IDHDSP" />
+                <ScalarProperty Name="IDSP" ColumnName="IDSP" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CTHDTONGs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.CTHDTONG">
+              <MappingFragment StoreEntitySet="CTHDTONG">
+                <ScalarProperty Name="IDCTHDTong" ColumnName="IDCTHDTong" />
+                <ScalarProperty Name="IDHDTong" ColumnName="IDHDTong" />
+                <ScalarProperty Name="LoaiHoaDon" ColumnName="LoaiHoaDon" />
+                <ScalarProperty Name="IDHoaDonCon" ColumnName="IDHoaDonCon" />
+                <ScalarProperty Name="TongHoaDonCon" ColumnName="TongHoaDonCon" />
+                <ScalarProperty Name="TongTienHDCon" ColumnName="TongTienHDCon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDDATSANs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.HDDATSAN">
+              <MappingFragment StoreEntitySet="HDDATSAN">
+                <ScalarProperty Name="IDHDDatSan" ColumnName="IDHDDatSan" />
+                <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
+                <ScalarProperty Name="NgayLapHD" ColumnName="NgayLapHD" />
+                <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDSPs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.HDSP">
+              <MappingFragment StoreEntitySet="HDSP">
+                <ScalarProperty Name="IDHDSP" ColumnName="IDHDSP" />
+                <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDTONGs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.HDTONG">
+              <MappingFragment StoreEntitySet="HDTONG">
+                <ScalarProperty Name="IDHDTong" ColumnName="IDHDTong" />
+                <ScalarProperty Name="IDKH" ColumnName="IDKH" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="TongTienTra" ColumnName="TongTienTra" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KHACHHANGs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.KHACHHANG">
+              <MappingFragment StoreEntitySet="KHACHHANG">
+                <ScalarProperty Name="IDKhachHang" ColumnName="IDKhachHang" />
+                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
+                <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="VaiTro" ColumnName="VaiTro" />
+                <ScalarProperty Name="NgayTaoTK" ColumnName="NgayTaoTK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOAICALAMs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.LOAICALAM">
+              <MappingFragment StoreEntitySet="LOAICALAM">
+                <ScalarProperty Name="IDLoaiCa" ColumnName="IDLoaiCa" />
+                <ScalarProperty Name="TenCa" ColumnName="TenCa" />
+                <ScalarProperty Name="GioBatDau" ColumnName="GioBatDau" />
+                <ScalarProperty Name="GioKetThuc" ColumnName="GioKetThuc" />
+                <ScalarProperty Name="LuongTheoGio" ColumnName="LuongTheoGio" />
+                <ScalarProperty Name="TongGioCa" ColumnName="TongGioCa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOAISANs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.LOAISAN">
+              <MappingFragment StoreEntitySet="LOAISAN">
+                <ScalarProperty Name="IDLoaiSan" ColumnName="IDLoaiSan" />
+                <ScalarProperty Name="TenLoaiSan" ColumnName="TenLoaiSan" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LSPFOODs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.LSPFOOD">
+              <MappingFragment StoreEntitySet="LSPFOOD">
+                <ScalarProperty Name="IDLoaiSP" ColumnName="IDLoaiSP" />
+                <ScalarProperty Name="TenLoaiSP" ColumnName="TenLoaiSP" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NHANVIENs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.NHANVIEN">
+              <MappingFragment StoreEntitySet="NHANVIEN">
+                <ScalarProperty Name="IDNhanVien" ColumnName="IDNhanVien" />
+                <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
+                <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="VaiTro" ColumnName="VaiTro" />
+                <ScalarProperty Name="NgayVaoLam" ColumnName="NgayVaoLam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QUANTRIVIENs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.QUANTRIVIEN">
+              <MappingFragment StoreEntitySet="QUANTRIVIEN">
+                <ScalarProperty Name="IDAdmin" ColumnName="IDAdmin" />
+                <ScalarProperty Name="TenAdmin" ColumnName="TenAdmin" />
+                <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="VaiTro" ColumnName="VaiTro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SANs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.SAN">
+              <MappingFragment StoreEntitySet="SAN">
+                <ScalarProperty Name="IDSan" ColumnName="IDSan" />
+                <ScalarProperty Name="IDLoaiSan" ColumnName="IDLoaiSan" />
+                <ScalarProperty Name="TenSan" ColumnName="TenSan" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="TinhTrangHienTai" ColumnName="TinhTrangHienTai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SPFOODs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.SPFOOD">
+              <MappingFragment StoreEntitySet="SPFOOD">
+                <ScalarProperty Name="IDSP" ColumnName="IDSP" />
+                <ScalarProperty Name="IDLoaiSP" ColumnName="IDLoaiSP" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SUKIENKHUYENMAIs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.SUKIENKHUYENMAI">
+              <MappingFragment StoreEntitySet="SUKIENKHUYENMAI">
+                <ScalarProperty Name="IDSuKien" ColumnName="IDSuKien" />
+                <ScalarProperty Name="TenSuKien" ColumnName="TenSuKien" />
+                <ScalarProperty Name="GiaTriGiam" ColumnName="GiaTriGiam" />
+                <ScalarProperty Name="MaCodeKM" ColumnName="MaCodeKM" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="NgayBatDauSK" ColumnName="NgayBatDauSK" />
+                <ScalarProperty Name="NgayKetThucSK" ColumnName="NgayKetThucSK" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TINHLUONGs">
+            <EntityTypeMapping TypeName="HeThongDatSanTheThaoModel.TINHLUONG">
+              <MappingFragment StoreEntitySet="TINHLUONG">
+                <ScalarProperty Name="IDLuong" ColumnName="IDLuong" />
+                <ScalarProperty Name="IDNhanVien" ColumnName="IDNhanVien" />
+                <ScalarProperty Name="Thang" ColumnName="Thang" />
+                <ScalarProperty Name="Nam" ColumnName="Nam" />
+                <ScalarProperty Name="TongSoGio" ColumnName="TongSoGio" />
+                <ScalarProperty Name="TongLuong" ColumnName="TongLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

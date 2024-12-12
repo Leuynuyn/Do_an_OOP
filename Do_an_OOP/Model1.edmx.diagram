@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a70b16e51a1b441089e7452673ca1fec" Name="Diagram1" ZoomLevel="60">
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.CALAMVIEC" Width="1.5" PointX="19.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.CTHDDATSAN" Width="1.5" PointX="9.625" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.CTHDSP" Width="1.5" PointX="12.625" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.CTHDTONG" Width="1.5" PointX="9.625" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.HDDATSAN" Width="1.5" PointX="7.375" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.HDSP" Width="1.5" PointX="7.375" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.HDTONG" Width="1.5" PointX="7.375" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.KHACHHANG" Width="1.5" PointX="5.125" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.LOAICALAM" Width="1.5" PointX="12.125" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.LOAISAN" Width="1.5" PointX="1.375" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.LSPFOOD" Width="1.5" PointX="12.875" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.NHANVIEN" Width="1.5" PointX="17.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.QUANTRIVIEN" Width="1.5" PointX="14.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.SAN" Width="1.5" PointX="3.625" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.SPFOOD" Width="1.5" PointX="15.125" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.SUKIENKHUYENMAI" Width="1.5" PointX="16.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HeThongDatSanTheThaoModel.TINHLUONG" Width="1.5" PointX="19.5" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__CALAMVIEC__IDLoa__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__CALAMVIEC__IDNha__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__CTHDDATSA__IDHDD__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__CTHDDATSA__IDSan__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__CTHDSP__IDHDSP__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__CTHDSP__IDSP__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__CTHDTONG__IDHDTo__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__HDDATSAN__IDKhac__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__HDSP__IDKhachHan__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__HDTONG__IDKH__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__SAN__IDLoaiSan__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__SPFOOD__IDLoaiSP__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="HeThongDatSanTheThaoModel.FK__TINHLUONG__IDNha__4F7CD00D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

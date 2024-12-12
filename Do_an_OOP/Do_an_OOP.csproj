@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C26524E-163F-40DB-9365-4A2BEBF61A88}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Do_an_OOP</RootNamespace>
+    <AssemblyName>Do_an_OOP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CALAMVIEC.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controler\CtrlHoaDon.cs" />
+    <Compile Include="Controler\CtrlKhachHang.cs" />
+    <Compile Include="Controler\Ctrl_CaLamViec.cs" />
+    <Compile Include="Controler\Ctrl_CTHDSan.cs" />
+    <Compile Include="Controler\Ctrl_LoaiCaLam.cs" />
+    <Compile Include="Controler\Ctrl_LoaiSan.cs" />
+    <Compile Include="Controler\Ctrl_Luong.cs" />
+    <Compile Include="Controler\Ctrl_NhanVien.cs" />
+    <Compile Include="Controler\Ctrl_QTV.cs" />
+    <Compile Include="Controler\Ctrl_San.cs" />
+    <Compile Include="Controler\Ctrl_SuKien.cs" />
+    <Compile Include="CTHDDATSAN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTHDSP.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTHDTONG.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CUtils.cs" />
+    <Compile Include="FChonQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChonQuyen.Designer.cs">
+      <DependentUpon>FChonQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangKi.Designer.cs">
+      <DependentUpon>FDangKi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDatSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDatSan.Designer.cs">
+      <DependentUpon>FDatSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHDDatSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHDDatSan.Designer.cs">
+      <DependentUpon>FHDDatSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHomeKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHomeKH.Designer.cs">
+      <DependentUpon>FHomeKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLoginKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLoginKH.Designer.cs">
+      <DependentUpon>FLoginKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FQLKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQLKhachHang.Designer.cs">
+      <DependentUpon>FQLKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTestTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTestTT.Designer.cs">
+      <DependentUpon>FTestTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTKKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTKKH.Designer.cs">
+      <DependentUpon>FTKKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HDDATSAN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HDSP.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HDTONG.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KHACHHANG.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOAICALAM.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOAISAN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FLSuDatSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLSuDatSan.Designer.cs">
+      <DependentUpon>FLSuDatSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FQLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQLNhanVien.Designer.cs">
+      <DependentUpon>FQLNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FQLSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQLSan.Designer.cs">
+      <DependentUpon>FQLSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSuKienAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSuKienAD.Designer.cs">
+      <DependentUpon>FSuKienAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTinhLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTinhLuong.Designer.cs">
+      <DependentUpon>FTinhLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDonNV.Designer.cs">
+      <DependentUpon>HoaDonNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeAdmin.Designer.cs">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeNV.Designer.cs">
+      <DependentUpon>HomeNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginNv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginNv.Designer.cs">
+      <DependentUpon>LoginNv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginQTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginQTV.Designer.cs">
+      <DependentUpon>LoginQTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LSPFOOD.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MyGereral.cs" />
+    <Compile Include="NHANVIEN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QUANTRIVIEN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SAN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPFOOD.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUKIENKHUYENMAI.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TINHLUONG.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FChonQuyen.resx">
+      <DependentUpon>FChonQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDangKi.resx">
+      <DependentUpon>FDangKi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDatSan.resx">
+      <DependentUpon>FDatSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHDDatSan.resx">
+      <DependentUpon>FHDDatSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHomeKH.resx">
+      <DependentUpon>FHomeKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLoginKH.resx">
+      <DependentUpon>FLoginKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLSuDatSan.resx">
+      <DependentUpon>FLSuDatSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQLKhachHang.resx">
+      <DependentUpon>FQLKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQLNhanVien.resx">
+      <DependentUpon>FQLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQLSan.resx">
+      <DependentUpon>FQLSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSuKienAD.resx">
+      <DependentUpon>FSuKienAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTestTT.resx">
+      <DependentUpon>FTestTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTinhLuong.resx">
+      <DependentUpon>FTinhLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTKKH.resx">
+      <DependentUpon>FTKKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDonNV.resx">
+      <DependentUpon>HoaDonNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeAdmin.resx">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeNV.resx">
+      <DependentUpon>HomeNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginNv.resx">
+      <DependentUpon>LoginNv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginQTV.resx">
+      <DependentUpon>LoginQTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="resources\eye.png" />
+    <Content Include="resources\Logo.jpg" />
+    <Content Include="resources\Mã chuyển tiền.jpg" />
+    <Content Include="resources\tick_xanh.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+</Project>
